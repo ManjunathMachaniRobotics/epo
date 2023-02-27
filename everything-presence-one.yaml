@@ -32,7 +32,8 @@ api:
 ota:
 
 wifi:
-  fast_connect: ${hidden_ssid}
+  ssid: "MR_BRZ_EXT_2G"
+  password: "ynotwifi@"
   ap: {}
 
 captive_portal:
@@ -67,7 +68,7 @@ sensor:
       name: "${room} Humidity"
       filters:
         offset: ${humidity_offset}
-    address: 0x70
+    address: 0x77
     update_interval: ${temperature_update_interval}
   - platform: bh1750
     name: "${room} Illuminance"
@@ -80,7 +81,7 @@ binary_sensor:
     id: mmwave
     device_class: occupancy
     pin:
-      number: GPIO15
+      number: GPIO16
       mode: INPUT_PULLDOWN
   - platform: gpio
     pin:
