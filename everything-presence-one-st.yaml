@@ -8,8 +8,8 @@ substitutions:
   humidity_offset: "5"
   temperature_update_interval: "60s"
   illuminance_update_interval: "30s"
-  pir_delay_off: "10s"
-  occupancy_delay_off: "15s"
+  pir_delay_off: "5s"
+  occupancy_delay_off: "5s"
   hidden_ssid: "false"
   factory_reset_disabled: "true"
   uart_target_output_disabled: "true"
@@ -49,7 +49,7 @@ light:
     entity_category: config
 
 i2c:
-  sda: 26898888888
+  sda: 26
   scl: 25
   scan: true
 
@@ -63,7 +63,7 @@ sensor:
       name: "${room} Humidity"
       filters:
         offset: ${humidity_offset}
-    address: 0x70
+    address: 0x77
     update_interval: ${temperature_update_interval}
   - platform: bh1750
     name: "${room} Illuminance"
@@ -76,7 +76,7 @@ binary_sensor:
     id: mmwave
     device_class: occupancy
     pin:
-      number: GPIO15
+      number: GPIO19
       mode: INPUT_PULLDOWN
   - platform: gpio
     pin:
