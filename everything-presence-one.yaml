@@ -58,7 +58,7 @@ i2c:
   scan: true
 
 sensor:
-  - platform: shtcx
+  - platform: bme280
     temperature:
       name: "${room} Temperature"
       filters:
