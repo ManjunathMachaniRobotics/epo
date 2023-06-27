@@ -49,7 +49,7 @@ light:
     entity_category: config
 
 i2c:
-  sda: 26
+  sda: 266
   scl: 25
   scan: true
 
