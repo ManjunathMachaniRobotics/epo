@@ -43,7 +43,7 @@ esp32_improv:
   authorizer: none
   
 dashboard_import:
-  package_import_url: github://ManjunathMachaniRobotics/epo/everything-presence-one-st.yaml@main
+  package_import_url: github://ManjunathMachaniRobotics/epo/everything-presence-one.yaml@main
   import_full_config: false
 
 light:
