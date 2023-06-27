@@ -86,7 +86,7 @@ binary_sensor:
     id: mmwave
     device_class: occupancy
     pin:
-      number: GPIO19
+      number: 19
       mode: INPUT_PULLDOWN
   - platform: gpio
     pin:
