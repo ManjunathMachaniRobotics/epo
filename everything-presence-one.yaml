@@ -8,8 +8,8 @@ substitutions:
   humidity_offset: "5"
   temperature_update_interval: "60s"
   illuminance_update_interval: "30s"
-  pir_delay_off: "10s"
-  occupancy_delay_off: "15s"
+  pir_delay_off: "5s"
+  occupancy_delay_off: "5s"
   hidden_ssid: "false"
   factory_reset_disabled: "true"
   uart_target_output_disabled: "true"
@@ -43,7 +43,7 @@ esp32_improv:
   authorizer: none
   
 dashboard_import:
-  package_import_url: github://everythingsmarthome/presence-one/everything-presence-one.yaml@main
+  package_import_url: github://ManjunathMachaniRobotics/epo/everything-presence-one-st.yaml@main
   import_full_config: false
 
 light:
@@ -67,7 +67,7 @@ sensor:
       name: "${room} Humidity"
       filters:
         offset: ${humidity_offset}
-    address: 0x70
+    address: 0x77
     update_interval: ${temperature_update_interval}
   - platform: bh1750
     name: "${room} Illuminance"
@@ -80,7 +80,7 @@ binary_sensor:
     id: mmwave
     device_class: occupancy
     pin:
-      number: GPIO15
+      number: GPIO19
       mode: INPUT_PULLDOWN
   - platform: gpio
     pin:
